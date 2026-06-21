@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Samyuktha258/localRepo.git'
-            }
-        }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean compile'
